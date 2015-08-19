@@ -36,3 +36,13 @@
 
 	$w.moduleLoader = new ModuleLoader();
 })(window);
+
+function Dog(name) {
+    Animal.call(this, name);
+}
+ 
+Dog.prototype = new Animal(null);
+ 
+Dog.prototype.bark = function() {
+    console.log("Woof!");
+};
