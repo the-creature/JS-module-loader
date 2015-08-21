@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Module Loader</title>
+	<script type="text/javascript" src="js/module.loader.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js"></script>
+</head>
+<body>
+	<h1>Module Loader</h1>
+	<h2>ReactJS</h2>
+	<script type="text/jsx" src="js/react.modules.js"></script>
+	<script type="text/jsx">
+		ModuleLoader.loadModules({
+			container: document.querySelector('body'),
+			modules: [
+				'util',
+				'header',
+				'carousel',
+				'modal',
+				'tooltip',
+				'autocomplete'
+			],
+			callback: function(state, module) {
+				console.log(state, module)
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Module Loader</title>
+	<script type="text/javascript" src="js/module.loader.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+</head>
+<body>
+	<h1>Module Loader</h1>
+	<h2>AngularJS</h2>
+	<script type="text/javascript" src="js/angular.modules.js"></script>
+	<script type="text/javascript">
+		ModuleLoader.loadModules({
+			container: document.querySelector('body'),
+			modules: [
+				'util',
+				'header',
+				'carousel',
+				'modal',
+				'tooltip',
+				'autocomplete'
+			],
+			callback: function(state, module) {
+				console.log(state, module)
+			}
+		});
+	</script>
+</body>
+</html>

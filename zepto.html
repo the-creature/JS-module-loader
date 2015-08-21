@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Module Loader</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+	<script type="text/javascript" src="js/module.loader.js"></script>
+</head>
+<body>
+	<h1>Module Loader</h1>
+	<h2>ZeptoJS</h2>
+	<script type="text/javascript" src="js/jquery-zepto.modules.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('body').ModuleLoader({
+				modules: [
+					'util',
+					'header',
+					'carousel',
+					'modal',
+					'tooltip',
+					'autocomplete'
+				],
+				callback: function(state, module) {
+					console.log(state, module)
+				}
+			});
+		});
+	</script>
+</body>
+</html>

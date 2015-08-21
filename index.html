@@ -5,38 +5,14 @@
 	<title>Module Loader</title>
 </head>
 <body>
-
-	<!-- Example with reactJS -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js"></script>
-	<!-- Include module loader -->
-	<script type="text/javascript" src="js/module.loader.js"></script>
-	<script type="text/jsx" src="js/modules.js"></script>
-	<script type="text/jsx">
-		/*Type should be same as for modules*/
-		/*Pure case*/
-		moduleLoader.loadModules({
-			container: document.querySelector('body'),
-			modules: [
-				'util',
-				'header',
-				'carousel',
-				'modal',
-				'tooltip',
-				'autocomplete'
-			],
-			callback: function(state) {  }
-		});
-		/*
-			jQuery or Zepto
-
-			$('body').moduleLoader({
-				modules: [],
-				callback: function(state) {
-					//
-				}
-			});
-		*/
-	</script>
+	<h1>Module Loader</h1>
+	<h2>Examples</h2>
+	<ul>
+		<li><a href="react.html">ReactJS</a></li>
+		<li><a href="angular.html">AngularJS</a></li>
+		<li><a href="backbone.html">BackboneJS</a></li>
+		<li><a href="jquery.html">jQueryJS</a></li>
+		<li><a href="zepto.html">ZeptoJS</a></li>
+	</ul>
 </body>
 </html>
